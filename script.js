@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const baseUrl = window.location.origin + window.location.pathname;
         const shareUrl = `${baseUrl}?name=${encodeURIComponent(nameToShare)}`;
         const shareTitle = "Wedding Invitation: Anuradha & Poornima";
-        const shareText = `🌸 You're Invited! 🌸\n\nDear ${nameToShare},\n\nWe joyfully invite you to celebrate our wedding!\n\n📅 Monday, 04 May 2026\n⏰ 9:00 AM\n📍 Ella Flower Garden Hotel, Ella\n\nYour personal invitation: ${shareUrl}`;
+        const shareText = `🌸 You're Invited! 🌸\n\nDear ${nameToShare},\n\nWe joyfully invite you to celebrate our wedding!\n\n📅 Monday, 04 May 2026\n⏰ 9:00 AM\n📍 Ella Flower Garden Hotel, Ella\n\n✨ Our Wedding Invitation: ${shareUrl}`;
 
         if (navigator.share) {
             try {
