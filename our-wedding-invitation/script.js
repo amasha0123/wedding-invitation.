@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get Guest Name from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const guestName = urlParams.get('name');
+    // 1. Get Guest Name from URL Hash (#Name)
+    let guestName = window.location.hash.substring(1); // Remove the '#'
     const guestDisplay = document.getElementById('guestName');
 
     if (guestName) {
-        guestDisplay.textContent = `Dear ${decodeURIComponent(guestName)},`;
+        // Replace pluses/dashes with spaces for a cleaner name if needed
+        guestName = decodeURIComponent(guestName).replace(/[+_-]/g, ' ');
+        guestDisplay.textContent = `Dear ${guestName},`;
     } else {
         guestDisplay.textContent = "Dear Loved One,";
     }
@@ -70,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Generate the URL (using the current base URL)
+        // Generate the URL (using Hash for a cleaner look)
         const baseUrl = window.location.origin + window.location.pathname;
-        const shareUrl = `${baseUrl}?name=${encodeURIComponent(nameToShare)}`;
+        const shareUrl = `${baseUrl}#${encodeURIComponent(nameToShare)}`;
         const shareTitle = "Wedding Invitation: Anuradha & Poornima";
         const shareText = `🌸 You're Invited! 🌸\n\nDear ${nameToShare},\n\nWe joyfully invite you to celebrate our wedding!\n\n📅 Monday, 04 May 2026\n⏰ 9:00 AM\n📍 Ella Flower Garden Hotel, Ella\n\n✨ Our Wedding Invitation: ${shareUrl}`;
 
