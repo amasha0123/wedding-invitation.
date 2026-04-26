@@ -1,0 +1,305 @@
+:root {
+    --primary-color: #D4AF37; /* Gold */
+    --secondary-color: #5D4037; /* Deep Brown */
+    --accent-color: #E8F5E9; /* Soft Green */
+    --bg-color: #fdfcf0;
+    --text-color: #333;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.container.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.invitation-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    width: 100%;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.floral-decoration {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.floral-decoration.top {
+    top: -20px;
+    right: -20px;
+    transform: rotate(15deg);
+}
+
+.floral-decoration.bottom {
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(-165deg);
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.greeting-text {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.guest-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.invite-msg {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.couple-names {
+    margin: 40px 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.couple-names .ampersand {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.details-section {
+    background: rgba(212, 175, 55, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item .icon {
+    font-size: 1.5rem;
+}
+
+.detail-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Share Section */
+.share-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed rgba(212, 175, 55, 0.3);
+}
+
+.share-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.share-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.share-input-group input {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.share-input-group input:focus {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.btn-share {
+    background: var(--secondary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-share:hover {
+    background: #4a332c;
+    transform: translateY(-2px);
+}
+
+.share-status {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #2e7d32;
+    height: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+.closing-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Loader */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.flower-loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--accent-color);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .invitation-card {
+        padding: 40px 25px;
+    }
+    
+    .couple-names {
+        font-size: 2.8rem;
+    }
+    
+    .guest-name {
+        font-size: 1.8rem;
+    }
+}
