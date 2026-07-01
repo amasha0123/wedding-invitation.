@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Sara & Yesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <!-- Floating Petals Container -->
+    <div class="petals-container" id="petals"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="loader-overlay" id="loader">
+        <div class="loader-content">
+            <span class="loader-names">Sara & Yesh</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <div class="music-control" id="musicToggle">
+        <span class="music-icon">♫</span>
+        <span class="music-text">Play Music</span>
+    </div>
+
+    <div class="main-wrapper">
+        <div id="invitationContent" style="display: none;">
+            
+            <!-- Navigation Bar -->
+            <nav class="navbar" id="navbar">
+                <div class="nav-logo">S <span class="amp">&</span> Y</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="hero-section reveal" id="home">
+                <!-- Hero Slideshow -->
+                <div class="hero-slideshow">
+                    <div class="slide active" style="background-image: url('assets/bg.png');"></div>
+                    <div class="slide" style="background-image: url('assets/preshoot1.png');"></div>
+                    <div class="slide" style="background-image: url('assets/preshoot2.png');"></div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop');"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <p class="hero-subtitle fade-in">— Together with their families —</p>
+                    <h1 class="couple-names scale-up">Sara <span class="amp">&</span> Yesh</h1>
+                    <div class="decorative-symbol spin">✦</div>
+                    <p class="hero-invite fade-in">cordially invite you to celebrate their</p>
+                    <h2 class="event-title slide-up">Wedding Day</h2>
+
+                    <div class="hero-date">
+                        <span class="day">MONDAY</span>
+                        <span class="number">04</span>
+                        <span class="month">MAY · 2026</span>
+                    </div>
+
+                    <div class="scroll-hint">
+                        <p>Scroll to explore</p>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Greeting Section -->
+            <section class="greeting-section reveal" id="story">
+                <div class="container">
+                    <h3 class="personal-dear">Dear <span id="receiverName">Guest</span>,</h3>
+                    <div class="heart-symbol pulse">♡</div>
+                    <p class="greeting-text">
+                        We joyfully request the honor of your presence as we exchange vows and begin our journey together as
+                        husband and wife. Your love and support mean the world to us, and we cannot imagine this day without
+                        you.
+                    </p>
+                    <p class="greeting-text" style="font-size: 1.1rem; color: var(--text-light); margin-top: -20px;">
+                        Seven years ago, our story began in a small coffee shop in the heart of the city. Through countless adventures, laughter, and a few tears, we've built a beautiful life together. Now, we are ready to write our next chapter and we want you to be there.
+                    </p>
+                    <p class="closing-love">With all our love,<br><strong>Sara and Yesh</strong></p>
+                </div>
+            </section>
+
+            <!-- Countdown Section -->
+            <section class="countdown-section reveal">
+                <h3 class="section-subtitle">— Save the Date —</h3>
+                <div class="countdown-container" id="countdown">
+                    <div class="count-box">
+                        <span class="count-num" id="days">00</span>
+                        <span class="count-label">Days</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-num" id="hours">00</span>
+                        <span class="count-label">Hours</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-num" id="minutes">00</span>
+                        <span class="count-label">Minutes</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-num" id="seconds">00</span>
+                        <span class="count-label">Seconds</span>
+                    </div>
+                </div>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sara+and+Yesh%27s+Wedding&dates=20260504T033000Z/20260504T123000Z&details=Join+us+for+our+wedding+celebration!&location=Ella+Flower+Garden+Resort" target="_blank" class="calendar-btn">Add to Google Calendar</a>
+            </section>
+
+            <!-- Pre-shoot Gallery -->
+            <section class="gallery-section reveal" id="gallery">
+                <div class="gallery-bg-element">✽</div>
+                <h3 class="section-subtitle">— Our Moments —</h3>
+                <h2 class="section-main-title">Gallery</h2>
+                
+                <div class="scattered-gallery">
+                    <div class="scatter-item frame-1">
+                        <img src="assets/preshoot1.png" alt="Pre-shoot Photo">
+                    </div>
+                    <div class="scatter-item frame-2">
+                        <img src="assets/couple.png" alt="Couple Photo">
+                    </div>
+                    <div class="scatter-item frame-3">
+                        <img src="assets/preshoot2.png" alt="Pre-shoot Photo">
+                    </div>
+                    <div class="scatter-item frame-4">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" alt="Moments">
+                    </div>
+                    <div class="scatter-item frame-5">
+                        <img src="https://images.unsplash.com/photo-1522673607200-1648832cee33?q=80&w=2070&auto=format&fit=crop" alt="Love">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order of the Day (Timeline) -->
+            <section class="timeline-section reveal" id="details">
+                <h3 class="section-subtitle">— The Day —</h3>
+                <h2 class="section-main-title">Order of the Day</h2>
+                <div class="timeline-symbol pulse">✦</div>
+
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="time">9:00 AM</div>
+                        <div class="event-details">
+                            <h4>Function Start</h4>
+                            <p>The wedding function begins and guests are welcomed</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">9:30 AM</div>
+                        <div class="event-details">
+                            <h4>Poruwa Ceremony</h4>
+                            <p>Traditional Poruwa ceremony and blessings</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">11:30 AM</div>
+                        <div class="event-details">
+                            <h4>Registration</h4>
+                            <p>Official marriage registration of the couple</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">4:30 PM</div>
+                        <div class="event-details">
+                            <h4>Going Away</h4>
+                            <p>The couple departs with blessings from family and friends</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dress Code & Gifting Section -->
+            <section class="info-section reveal">
+                <div class="container">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3 class="section-subtitle">— Dress Code —</h3>
+                            <h2 class="section-main-title">Attire</h2>
+                            <p class="info-text">We kindly request our guests to dress in formal attire. <br>Our color palette features soft pastels and elegant neutrals.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="section-subtitle">— Gifting —</h3>
+                            <h2 class="section-main-title">Registry</h2>
+                            <p class="info-text">Your presence is the greatest gift. However, should you wish to honor us with a gift, a wishing well will be available at the reception.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section class="location-section">
+                <h3 class="section-subtitle">— Find Us —</h3>
+                <h2 class="section-main-title">Venue</h2>
+                <div class="timeline-symbol">✦</div>
+                <div class="venue-info">
+                    <h3>Ella Flower Garden Resort</h3>
+                    <p>Ella Flower Garden Resort, Ella</p>
+                    <a href="https://maps.google.com/?q=Ella+Flower+Garden+Resort" target="_blank" class="maps-btn">
+                        Open in Maps →
+                    </a>
+                </div>
+            </section>
+
+            <!-- RSVP Section -->
+            <section class="rsvp-section reveal" id="rsvp">
+                <div class="rsvp-glass-card">
+                    <h3 class="section-subtitle">— Join Us —</h3>
+                    <h2 class="section-main-title">RSVP</h2>
+                    <p class="rsvp-text">Please let us know if you can make it to celebrate our special day.</p>
+                    <a href="https://wa.me/?text=Hi!%20I%20would%20love%20to%20attend%20your%20wedding!" target="_blank" class="btn-primary btn-rsvp">RSVP via WhatsApp</a>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <section class="footer-section">
+                <div class="floral-decoration top-floral">✽</div>
+                <p class="footer-love">With all our love</p>
+                <h2 class="footer-names">Sara <span class="amp">&</span> Yesh</h2>
+                <p class="footer-date">04 · 05 · 2026</p>
+                <div class="heart-symbol pulse">♡</div>
+                <p class="hashtag">#saraandyesh2026</p>
+            </section>
+        </div>
+
+        <!-- Sharing Tool -->
+        <section class="share-generator">
+            <div class="share-card glass-panel">
+                <h3>Invite a Friend</h3>
+                <p>Type your friend's name below to generate a personalized message.</p>
+                <div class="share-input-group">
+                    <input type="text" id="guestInput" placeholder="Enter guest name...">
+                    <button id="generateBtn" class="btn-primary">Generate Link</button>
+                    <a id="whatsappBtn" class="btn-primary" style="display:none; background: #25D366; text-decoration: none; text-align: center;" target="_blank">Share on WhatsApp</a>
+                </div>
+                <p id="shareStatus" class="share-status"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js?v=3"></script>
+</body>
+
+</html>
